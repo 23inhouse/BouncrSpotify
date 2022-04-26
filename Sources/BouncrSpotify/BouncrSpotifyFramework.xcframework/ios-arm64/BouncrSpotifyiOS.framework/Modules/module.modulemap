@@ -1,0 +1,11 @@
+framework module BouncrSpotifyiOS {
+  umbrella header "BouncrSpotifyiOS.h"
+
+  export *
+  module * { export * }
+}
+
+module BouncrSpotifyiOS.Swift {
+    header "BouncrSpotifyiOS-Swift.h"
+    requires objc
+}

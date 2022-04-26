@@ -15,10 +15,12 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "SpotifyiOS",
-            path: "Sources/SpotifyiOS/SpotifyiOS.framework"),
+            name: "BouncrSpotifyFramework",
+            path: "Sources/BouncrSpotify/BouncrSpotifyFramework.xcframework"),
         .target(
             name: "BouncrSpotify",
-            dependencies: [.target(name: "SpotifyiOS", condition: .when(platforms: [.iOS]))]),
+            dependencies: [
+                .target(name: "BouncrSpotifyFramework", condition: .when(platforms: [.iOS]))
+            ]),
     ]
 )
